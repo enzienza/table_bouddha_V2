@@ -1,0 +1,36 @@
+// main: ../style.scss
+
+
+.scrollTop {
+    background: $color-primary-light;
+    color: $color-light;
+    position: fixed;
+
+    padding: 6px 12px;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    z-index:1000;
+    border-radius: 100%;
+    opacity:0;
+
+    @include transition_scrollTop;
+    @include shadow(0 0px 10px rgba(9, 9, 9, 0.9));
+
+
+    &:hover{
+      text-decoration: none;
+      color: $color-light;
+      opacity: 1;
+    }
+
+    .icons{
+      vertical-align: middle;
+    }
+    [class^="flaticon-"]::before, [class*=" flaticon-"]::before{
+      font-size: inherit;
+      margin-left: 0;
+    }
+}

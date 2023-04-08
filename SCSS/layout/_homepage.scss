@@ -1,0 +1,442 @@
+// main: ../style.scss
+
+
+.filter{
+  height: 90vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  @include filter-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+
+  .jumbtitle{
+    text-align: center;
+    color: $color-light;
+    padding-top: 10%;
+
+    .logo{
+      width: 14em;
+      height: auto;
+      @include align-items(center);
+      &-center{
+        padding-top: calc(100% / 5);
+      }
+    }
+    h1{
+      font-size: 5em;
+      font-family: $font-secondary;
+    }
+    .title-center{
+      padding-top:15%
+    }
+  }
+  .message{
+    padding-top: 5%;
+
+    .small{
+      padding-top:15%;
+
+      &-logo{
+        padding-top:10%;
+        width: 14em;
+      }
+      &-title{
+        font-size:2em;
+      }
+    }
+
+    .view-message{
+      font-family: $font-primary-light;
+      align-self: center;
+      font-size: 1.5em;
+    }
+  }
+
+  .my-4{
+    margin-top: 0 !important;
+  }
+}
+
+.info-contact{
+  color: $color-light;
+  font-family: $font-primary-light;
+  @include flex;
+  @include justify-content(center);
+
+  ul{
+    @include inline-flex;
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .item-info-contact{
+    @include inline-flex;
+    line-height: 2;
+    margin-right: 2rem;
+
+    .icons{
+      font-size: 1rem;
+      margin-right: 15px;
+    }
+
+    p{
+      font-size: 1rem;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+#bg-image{
+  height: 100vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .filter{
+    height: 100vh;
+    @include filter-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+  }
+}
+
+@include responsive(MD){
+  #bg-video{
+    video, ::before, ::after {
+      background: #000;
+    }
+    .filter{
+      .jumbtitle{
+        .logo{
+          width: calc(100% / 5);
+        }
+        h1{
+          font-size: calc(5em - 1em);
+        }
+        .title-center{
+          padding-top: calc(100% / 2.5);
+        }
+      }
+
+      .message{
+        .small{
+          padding-top: calc(100% / 2.5) !important;
+          &-md-3{
+            padding-top: calc(100% / 4) !important;
+          }
+          &-md-9{
+            padding-top: calc(10% / 2) !important;
+          }
+        }
+        .view{
+          &-message{
+            padding-top: 1.5em;
+          }
+        }
+      }
+
+      .my-4{
+        padding-top: calc(15% * 2.5);
+      }
+
+      .pt-4{
+        padding-top: calc(100% / 3) !important;
+      }
+    }
+  }
+
+  #bg-image{
+    .filter{
+      .jumbtitle{
+        .logo{
+          width: calc(100% / 5);
+        }
+        h1{
+          font-size: calc(5em - 1em);
+        }
+        .title-center{
+          padding-top: calc(100% / 2.5);
+        }
+      }
+
+      .message{
+        .jumbtitle{
+
+        }
+
+        .small{
+          &-logo{
+            padding-top: calc(10% * 2);
+          }
+          &-md-3{
+            padding-top: calc(100% / 4) !important;
+          }
+          &-md-9{
+            padding-top: calc(10% / 2) !important;
+          }
+          &-msg{
+            padding-top: calc(100% / 3) !important;
+          }
+        }
+
+        .view{
+          padding-top: 2em !important;
+          &-message{
+            padding-top: 1em;
+            font-size: calc(1.5em - .4em);
+          }
+        }
+      }
+
+      .my-4{
+        padding-top: calc(15% * 2);
+      }
+
+      .pt-4{
+        padding-top: calc(100% / 4) !important;
+      }
+    }
+  }
+}
+
+@include responsive(SM){
+  #bg-video{
+    video, ::before, ::after {
+      background: #000;
+    }
+
+    .filter{
+      height: 100vh;
+      .jumbtitle{
+        padding-top: calc(10% + 4%);
+        .logo{
+          width: calc(100% / 8);
+        }
+        h1{
+          font-size: calc(100% / .5);
+        }
+      }
+      .message{
+        .jumbtitle{
+          padding-top: calc(5% / 1);
+        }
+        .small{
+          font-size: calc(2em / 2) !important;
+          padding-top: calc(100% / 6) !important;
+
+          &-logo{
+            padding-top: calc(1em / 2);
+            width: calc(100% / 10);
+          }
+          &-title{
+            font-size: calc(2em / 1);
+          }
+
+          &-md-3{
+            padding-top: calc(10% / 2) !important;
+          }
+          &-md-9{
+            padding-top: calc(6% / 2) !important;
+          }
+        }
+
+        .view{
+          padding-top: calc(1em * 2) !important;
+          &-message{
+            font-size: calc(2em / 2.5);
+            padding-top: calc(1em / 2);
+          }
+        }
+      }
+
+      .pt-4{
+        padding-top: 3em !important;
+      }
+    }
+  }
+
+  #bg-image{
+    .filter{
+      .jumbtitle{
+        .logo{
+          width: calc(100% / 8);
+        }
+        h1{
+          font-size: calc(100% / .5);
+        }
+        .title-center{
+          padding-top: calc(10% / 1);
+        }
+      }
+
+      .message{
+        .jumbtitle{
+          padding-top: calc(5% / 1);
+        }
+        .small{
+          font-size: calc(2em / 2) !important;
+          padding-top: calc(100% / 6) !important;
+
+          &-logo{
+            padding-top: calc(1em / 2);
+            width: calc(100% / 10);
+          }
+          &-title{
+            font-size: calc(2em / 1);
+          }
+
+          &-md-3{
+            padding-top: calc(15% / 2) !important;
+          }
+          &-md-9{
+            padding-top: calc(6% / 2) !important;
+          }
+        }
+
+        .view{
+          padding-top: calc(1em * 2) !important;
+          &-message{
+            font-size: calc(2em / 2.5);
+            padding-top: calc(1em / 2);
+          }
+        }
+      }
+    }
+  }
+
+  .info-contact{
+    ul{
+      display: inline;
+      text-align: center;
+      bottom: 0;
+      margin-bottom: .5em;
+      color: $color-grey-light;
+    }
+
+    .item-info-contact{
+      line-height: 0;
+      margin: 0;
+
+      .icons{
+        font-size: small;
+        margin-right: 10px;
+      }
+
+      p{
+        font-size: small;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@include responsive(XS){
+  #bg-video{
+    video, ::before, ::after {
+      background: #000;
+    }
+    .filter{
+      height: 100vh;
+
+      .jumbtitle{
+        padding-top: calc(10% + 5%);
+        .logo{
+          width: calc(100% / 5);
+        }
+
+        h1{
+          font-size: calc(100% / .5);
+        }
+      }
+
+      .message{
+        .view-message{
+          font-size: calc(100% / 1);
+          position: fixed;
+          bottom: 7em;
+        }
+      }
+
+      .pt-6{
+        padding-top: 5em;
+      }
+    }
+  }
+
+  #bg-image{
+    .filter{
+      .jumbtitle{
+        .logo{
+          width: calc(100% / 4);
+          &-center{
+            width: calc(100% / 3) !important;
+          }
+        }
+
+        h1{
+          font-size: calc(100% / .5);
+        }
+
+        .title-center{
+          padding-top: calc(100% / 1.5);
+        }
+      }
+
+      .message{
+        padding-top: calc(100% / 5);
+
+        .small{
+          &-md-3{
+            padding-top: calc(100% / 3);
+          }
+          &-msg{
+            padding-top: calc(100% / 2.5) !important;
+          }
+        }
+
+        .view-message{
+          font-size: 1em;
+          padding-top: 1em;
+        }
+      }
+    }
+
+    .my-4{
+      padding-top: calc(100% / 2);
+    }
+
+    .pt-4{
+      padding-top: calc(100% / 3) !important;
+    }
+  }
+
+  .info-contact{
+    ul{
+      display: inline;
+      text-align: center;
+      bottom: 0;
+      left: 15px;
+      margin-bottom: .5em;
+      color: $color-grey-light;
+
+      .invible{
+        display: none;
+      }
+    }
+
+    .item-info-contact{
+      line-height: 0;
+      margin: 0;
+
+      .icons{
+        font-size: small;
+        margin-right: 10px;
+      }
+
+      p{
+        font-size: small;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

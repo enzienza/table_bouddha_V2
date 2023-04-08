@@ -1,0 +1,59 @@
+// main: ../style.scss
+
+
+.table-horaire {
+  //font-family: $font-primary-thin;
+  font-size: smaller;
+  width: 75%;
+  margin-left: 4em;
+
+  /* td{
+    padding-right: .5em;
+  } */
+
+  .item-heure{
+    border-bottom: 1px solid $color-grey-light;
+    height: 50px;
+    &:last-child{
+      border: none;
+    }
+  }
+  .day{
+    padding-left: 2em;
+  }
+  .heure{
+    text-align: center;
+  }
+  .close{
+    padding-left: 1.5em;
+  }
+}
+
+@include responsive(MD){
+  .table-horaire{
+    width: 100%;
+    margin-left: 0;
+    .day{
+      padding-left: 1.6;
+    }
+  }
+
+}
+
+@include responsive(SM){
+  .table-horaire{
+    .close{
+      padding-left: 4.5em;
+    }
+  }
+}
+
+@include responsive(XS){
+  .table-horaire{
+    width: 80%;
+    margin-left: 3em;
+    .close{
+      /* padding-left: calc(100% / 7); */
+    }
+  }
+}

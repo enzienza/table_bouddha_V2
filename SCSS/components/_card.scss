@@ -1,0 +1,94 @@
+// main: ../style.scss
+
+.card-event{
+  height: 280px;
+  max-height: 300px;
+  border-radius: 5px;
+  @include shadow(0 0 10px rgba(0, 0, 0, .3));
+  &:hover{
+    @include shadow(0 0px 10px rgba(9,9,9,0.9));
+    .btn{
+      opacity: 1;
+    }
+    .card-body{
+      height: 120px;
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      left: 15px;
+      z-index: 2;
+      text-align: center;
+      background: rgba(33, 37, 41, 0.95);
+    }
+  }
+
+  .card-title{
+    @include flex;
+    @include justify-content(center);
+    padding-top: .5em;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+  }
+  img{
+    width: 100%;
+    max-height: 180px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .card-body{
+    height: 100px;
+    @include transition_height_card;
+
+  }
+
+  .block-info{
+    margin-bottom: .5em;
+  }
+
+  .item-info-event{
+    font-size: 65%;
+    /* margin-right: 5px; */
+  }
+
+  .btn{
+    display: flex;
+    justify-content: center;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    border-radius: 5px;
+    margin: 0 5em;
+    padding: .5em;
+    overflow: hidden;
+    opacity: 0;
+    text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+    height: 2.5em;
+
+    &::before, &::after{
+      display: block;
+      clear: both;
+      content: '';
+      width: 0;
+      height: 0;
+    }
+  }
+
+
+  @include responsive(MS){
+
+  }
+
+  @include responsive(SM){
+    height: 350px;
+    max-height: 400px;
+    img{
+      max-height: 300px;
+      height: 250px;
+    }
+  }
+
+  @include responsive(XS){
+    height: 280px;
+  }
+
+}

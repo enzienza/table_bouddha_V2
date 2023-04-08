@@ -1,0 +1,25 @@
+// main: ../_mixins.scss
+
+@mixin transition_scrollTop {
+  -webkit-transition: background 0.5s;
+       -o-transition: background 0.5s;
+          transition: background 0.5s;
+}
+
+@mixin transition_navbar {
+  -webkit-transition: background-color .05s ease 0s;
+       -o-transition: background-color .05s ease 0s;
+          transition: background-color .05s ease 0s;
+}
+
+@mixin transition_navlink {
+  -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+       -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+          transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+}
+
+@mixin transition_height_card {
+  -webkit-transition: height .5s ease 0s;
+       -o-transition: height .5s ease 0s;
+          transition: height .5s ease 0s;
+}

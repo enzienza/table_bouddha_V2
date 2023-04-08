@@ -1,0 +1,32 @@
+// main: ../_mixins.scss
+
+
+@mixin responsive($breakpoint){
+  // Extra small device | Mobile portrait
+  @if $breakpoint == XS {
+    @media only screen and (min-width: $XS) and (max-width: calc(#{$SM} - 1px) ){
+      @content;
+    }
+  }
+
+  // Small devise | Mobile landscape
+  @else if $breakpoint == SM{
+    @media only screen and (min-width: $SM) and (max-width: calc(#{$MD} - 1px)){
+      @content;
+    }
+  }
+
+  // Medium device | tablet portrait
+  @else if $breakpoint == MD{
+    @media only screen and (min-width: $MD) and (max-width: calc(#{$LG} - 1px) ){
+      @content;
+    }
+  }
+
+  // Large device | laptops / desktop
+  @else if $breakpoint == LG{
+    @media only screen and (min-width: $LG) and (max-width: 1200px){
+      @content;
+    }
+  }
+}

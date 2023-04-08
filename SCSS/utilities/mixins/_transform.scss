@@ -1,0 +1,7 @@
+// main: ../_mixins.scss
+
+@mixin rotate($x) {
+  -webkit-transform: rotate($x);
+      -ms-transform: rotate($x);
+          transform: rotate($x);
+}
