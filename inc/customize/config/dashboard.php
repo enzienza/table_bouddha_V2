@@ -39,7 +39,7 @@ if(!function_exists('remove_menus')) {
         // remove_menu_page('edit.php?post_type=recettes'); // pour masque un custom_post_type
     }
 }
-add_action('admin_menu', 'remove_menus');
+ add_action('admin_menu', 'remove_menus');
 
 
 /**  ==========================================================================

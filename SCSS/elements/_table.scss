@@ -1,33 +1,59 @@
 // main: ../style.scss
 
+
 .table-horaire {
   //font-family: $font-primary-thin;
-  font-size: small;
+  font-size: smaller;
   width: 75%;
+  margin-left: 4em;
 
-  .item-days {
-    border-bottom: 1px solid lighten($color-dark, 10%);
+  /* td{
+    padding-right: .5em;
+  } */
+
+  .item-heure{
+    border-bottom: 1px solid $color-grey-light;
     height: 50px;
-    &:last-child {
+    &:last-child{
       border: none;
     }
   }
-
-  .day {
+  .day{
     padding-left: 2em;
   }
-  .hour {
-    &-list {
-      @include inline-flex;
-      @include justify-content(center);
-      width: 100%;
-      margin-bottom: 0;
+  .heure{
+    text-align: center;
+  }
+  .close{
+    padding-left: 1.5em;
+  }
+}
+
+@include responsive(MD){
+  .table-horaire{
+    width: 100%;
+    margin-left: 0;
+    .day{
+      padding-left: 1.6;
     }
-    &-item {
-      padding: 0 0.5em;
+  }
+
+}
+
+@include responsive(SM){
+  .table-horaire{
+    .close{
+      padding-left: 4.5em;
     }
   }
 }
-.today {
-  color: $color-primary;
+
+@include responsive(XS){
+  .table-horaire{
+    width: 80%;
+    margin-left: 3em;
+    .close{
+      /* padding-left: calc(100% / 7); */
+    }
+  }
 }

@@ -56,7 +56,6 @@ if(!function_exists('tablebouddha_register_assets')){
             [], '2.1.0'
         );
 
-
         // ===================================================================
         // JAVASCRIP
         // ===================================================================
@@ -71,7 +70,8 @@ if(!function_exists('tablebouddha_register_assets')){
             'bootstrap',
             'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',
             ['popper', 'jquery'],
-            '4.4.1', true
+            '4.4.1',
+            true
         );
 
         /**
@@ -85,10 +85,10 @@ if(!function_exists('tablebouddha_register_assets')){
             'popper',
             'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
             [],
-            '1.16.0', true
+            '1.16.0',
+            true
         );
         wp_enqueue_script('bootstrap');
-
 
         // SCRIPT CUSTOM  ....................................................
         /**
@@ -104,7 +104,6 @@ if(!function_exists('tablebouddha_register_assets')){
             '1.0',
             true
         );
-
 
         /**
          * SCROLLTOP
@@ -126,13 +125,13 @@ if(!function_exists('tablebouddha_register_assets')){
          * @description Permet de remonté la page
          * @version 1.0
          */
-        wp_enqueue_script(
-            'highlight-today',
-            get_template_directory_uri().'/assets/js/highlight-today.js',
-            [],
-            '1.0',
-            true
-        );
+       wp_enqueue_script(
+           'highlight-today',
+           get_template_directory_uri().'/assets/js/highlight-today.js',
+           [],
+           '1.0',
+           true
+       );
 
         /**
          * JQUERY
@@ -148,7 +147,6 @@ if(!function_exists('tablebouddha_register_assets')){
             '3.5.1',
             true
         );
-
     }
 }
 add_action('wp_enqueue_scripts', 'tablebouddha_register_assets');

@@ -30,7 +30,7 @@ require_once ('inc/customize/customize-index.php');
  * 2 - Options-Theme
  *     Directory about option of theme
  */
-require_once ('inc/options-theme/API-index.php');
+// require_once ('inc/options-theme/API-index.php');
 
 /** =====================================================
  * 3 - Post-Type
@@ -42,9 +42,10 @@ require_once ('inc/options-theme/API-index.php');
  * 4 - Metaboxes
  *     Directory about metaboxes created for theme
  */
-require_once('inc/metaboxes/meta-index.php');
+// require_once('inc/metaboxes/meta-index.php');
 
 /** =====================================================
  * 5 - Taxonomys
  *     Directory about taxonomys created for theme
  */
+// require_once('inc/metaboxes/taxo-index.php');

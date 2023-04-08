@@ -10,44 +10,51 @@ copyright : Enza ©2023
 Tags:
 */
 
+
 // VENDOR -------------------------------
 // @import "vendor/bootstrap";
 
+
 // UTILITIES ----------------------------
-@import "utilities/mixins";
-@import "utilities/variables";
-@import "utilities/animations";
+@import 'utilities/mixins';
+@import 'utilities/variables';
+@import 'utilities/animations';
+
 
 // BASE ---------------------------------
-@import "base/minireset";
-@import "base/general";
-@import "base/fonts";
+@import 'base/minireset';
+@import 'base/general';
+@import 'base/fonts';
+
 
 // COMPONENTS ---------------------------
-@import "components/menu";
-@import "components/scrollTop";
-@import "components/info-page";
-@import "components/booking";
-@import "components/tabs";
-@import "components/card";
+@import 'components/menu';
+@import 'components/scrollTop';
+@import 'components/info-page';
+@import 'components/booking';
+@import 'components/tabs';
+@import 'components/card';
+
+
 
 // ELEMENTS -----------------------------
 //@import 'elements/box';
-@import "elements/button";
+//@import 'elements/button';
 //@import 'elements/icon';
-@import "elements/table";
-@import "elements/title";
-@import "elements/video";
+@import 'elements/table';
+@import 'elements/title';
+@import 'elements/video';
 
 // FORM ---------------------------------
 //@import 'form/checked';
 //@import 'form/text';
 //@import 'form/select';
 
+
 // LAYOUT -------------------------------
-@import "layout/hero";
-@import "layout/footer";
-@import "layout/homepage";
-@import "layout/error";
-@import "layout/event";
+@import 'layout/hero';
+@import 'layout/footer';
+@import 'layout/homepage';
+@import 'layout/error';
+@import 'layout/event';
 //@import 'layout/section';

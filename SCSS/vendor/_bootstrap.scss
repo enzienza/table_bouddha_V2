@@ -1,0 +1,52 @@
+// main: ../style.scss
+
+
+/*------------------------------------------------------------------------------*/
+/* BOOTSTRAP */
+/*------------------------------------------------------------------------------*/
+
+
+// OBLIGATIR -------------------------------------------------------------------
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reboot";
+@import "bootstrap/grid";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/utilities";
+@import "bootstrap/print";
+
+
+
+// UTILISER --------------------------------------------------------------------
+//@import "bootstrap/tables";
+//@import "bootstrap/buttons";
+//@import "bootstrap/card";
+//@import "bootstrap/modal";
+
+
+
+// NON UTILISER ----------------------------------------------------------------
+//@import "bootstrap/root";
+//@import "bootstrap/type";
+//@import "bootstrap/images";
+//@import "bootstrap/code";
+//@import "bootstrap/forms";
+//@import "bootstrap/button-group";
+//@import "bootstrap/input-group";
+//@import "bootstrap/custom-forms";
+//@import "bootstrap/breadcrumb";
+//@import "bootstrap/pagination";
+//@import "bootstrap/badge";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/alert";
+//@import "bootstrap/progress";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/close";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popover";
+//@import "bootstrap/carousel";

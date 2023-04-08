@@ -1320,52 +1320,21 @@ body {
   }
 }
 
-/* h1{
-  font-size: 3em;
-  color:#fff;
-  background: red;
-
-  @include responsive(MD){
-    background: lime;
-    color: #fff;
-    font-style: 1em;
-  }
-} */
-.call-reserve {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  margin: 2rem 0;
-  text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
-}
-
-.btn-reservation {
-  border: 1px solid;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #F5A623;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: "philosopher";
-}
-
-.btn-reservation:hover {
-  background: #FFBD4E;
-  color: #111;
-}
-
 .table-horaire {
-  font-size: small;
+  font-size: smaller;
   width: 75%;
+  margin-left: 4em;
+  /* td{
+    padding-right: .5em;
+  } */
 }
 
-.table-horaire .item-days {
-  border-bottom: 1px solid #2b2b2b;
+.table-horaire .item-heure {
+  border-bottom: 1px solid #919191;
   height: 50px;
 }
 
-.table-horaire .item-days:last-child {
+.table-horaire .item-heure:last-child {
   border: none;
 }
 
@@ -1373,23 +1342,38 @@ body {
   padding-left: 2em;
 }
 
-.table-horaire .hour-list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 0;
+.table-horaire .heure {
+  text-align: center;
 }
 
-.table-horaire .hour-item {
-  padding: 0 0.5em;
+.table-horaire .close {
+  padding-left: 1.5em;
 }
 
-.today {
-  color: #F5A623;
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  .table-horaire {
+    width: 100%;
+    margin-left: 0;
+  }
+  .table-horaire .day {
+    padding-left: 1.6;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .table-horaire .close {
+    padding-left: 4.5em;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .table-horaire {
+    width: 80%;
+    margin-left: 3em;
+  }
+  .table-horaire .close {
+    /* padding-left: calc(100% / 7); */
+  }
 }
 
 .title-info {
