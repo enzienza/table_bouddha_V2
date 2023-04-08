@@ -1,0 +1,72 @@
+// main: ../style.scss
+
+.revervation{
+  color: $color-primary;
+  padding: 1em 0;
+  @include flex;
+  @include justify-content(center);
+  text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+
+  ul{
+    @include inline-flex;
+    @include align-items(center);
+  }
+
+  .icons{
+    font-size: 5.5em;
+    margin-right: 1em;
+  }
+
+  .booking{
+    font-family: $font-secondary;
+    text-align: center;
+
+    &-text{
+      font-size: 1.5em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    &-phone{
+      text-align: center;
+      font-size: 2em;
+      /* font-weight: bold; */
+      letter-spacing: 2px;
+    }
+  }
+
+
+  @include responsive(SM){
+    .icons{
+      font-size: 3em;
+      margin-right: .5em;
+    }
+
+    .booking{
+      &-text {
+      font-size: small;
+      margin-bottom: 0.5em;
+      }
+      &-phone{
+        font-size: medium;
+      }
+    }
+  }
+
+  @include responsive(XS){
+    .icons{
+      font-size: 3em;
+      margin-right: .5em;
+    }
+
+    .booking{
+      &-text {
+      font-size: small;
+      margin-bottom: 0.5em;
+      }
+      &-phone{
+        font-size: medium;
+      }
+    }
+  }
+
+}

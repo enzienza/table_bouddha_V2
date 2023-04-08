@@ -1,0 +1,28 @@
+// main: ../style.scss
+
+*{
+  margin: 0;
+  padding: 0;
+  &,
+  &::before,
+  &::after{
+    @include box-sizing(inherit);
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+html{
+  @include box-sizing(border-box);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  &:hover{
+    color: inherit;
+    text-decoration: none;
+  }
+}

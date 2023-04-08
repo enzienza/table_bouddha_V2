@@ -1,0 +1,56 @@
+// main: ../_fonts.scss
+
+
+// REGULAR
+@font-face {
+    font-family: 'poppins';
+    src: url('assets/fonts/poppins/poppins-regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/poppins/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// LIGHT
+@font-face {
+    font-family: 'poppins-light';
+    src: url('assets/fonts/poppins/poppins-light-webfont.woff2') format('woff2'),
+         url('fonts/poppins/poppins-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// THIN
+@font-face {
+    font-family: 'poppins-thin';
+    src: url('fonts/poppins/poppins-thin-webfont.woff2') format('woff2'),
+         url('fonts/poppins/poppins-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// MEDIUM
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('assets/fonts/poppins/poppins-medium-webfont.woff2') format('woff2'),
+         url('assets/fonts/poppins/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// BOLD
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('fonts/poppins/poppins-bold-webfont.woff2') format('woff2'),
+         url('fonts/poppins/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

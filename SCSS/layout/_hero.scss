@@ -1,0 +1,138 @@
+// main: ../style.scss
+
+.hero{
+  height: 90vh;
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .jumb{
+    &-hero{
+      text-align: center;
+      font-family: $font-secondary;
+      color: $color-light;
+      padding-top: 10%;
+
+      .logo{
+        width: 14em;
+        height: auto;
+        @include align-items(center);
+        &-center{
+          padding-top: 7%;
+        }
+      }
+
+      h1{
+        font-size: 5em;
+      }
+      .title-center{
+        padding-top: 15%;
+      }
+    }
+
+    &-message{
+      text-align: center;
+      padding-top: 20%;
+      .msg-title{
+        font-size: 3em;
+        line-height: 2;
+        letter-spacing: 5px;
+        font-family: $font-secondary;
+      }
+      .msg-text{
+        line-height: 2;
+        font-size: 1em;
+        margin: auto 4em;
+      }
+    }
+  }
+
+
+  @include responsive(MD){
+    .jumb{
+      &-message{
+        padding-top: calc(20% * 2);
+      }
+      &-hero{
+        padding-top: calc(10% * 2);
+        .logo-center{
+          padding-top: calc(50% / 5);
+        }
+        .title-center{
+          padding-top: calc(15% * 2);
+        }
+      }
+    }
+  }
+
+  @include responsive(SM){
+    /* height: calc(100vh - 15vh); */
+
+    .jumb{
+      &-message{
+        padding-top: calc(50% / 5);
+        .msg{
+          &-title{
+            font-size: calc(4em / 2);
+          }
+          &-text{
+            margin: 0;
+            font-size: small;
+          }
+        }
+      }
+      &-hero{
+        .logo{
+          width: calc(100% / 9);
+          padding-top: 0;
+          &-center{
+            width: calc(14em / 3);
+            padding-top: calc(2em / 2);
+          }
+        }
+        h1{
+          font-size: 2.5em;
+        }
+        .title-center{
+          padding-top: calc(15% / 2);
+        }
+      }
+    }
+  }
+
+  @include responsive(XS){
+    /* height: calc(100vh - 15vh); */
+
+    .jumb{
+      &-message{
+        padding-top: calc(100% / 2);
+        .msg{
+          &-title{
+            font-size: calc(10em / 5);
+          }
+          &-text{
+            font-size: calc(2em / 2.5);
+            margin: 0 2em;
+          }
+        }
+      }
+      &-hero{
+        .logo{
+          /* width: calc(100% / 9);
+          padding-top: calc(100% / 2); */
+          width: calc(100% / 3);
+          padding-top: calc(100% / 2);
+        }
+        h1{
+          /* font-size: 2em; */
+          font-size: calc(5em / 2);
+        }
+        .title-center{
+          padding-top: calc(15% * 4);
+        }
+      }
+    }
+  }
+}

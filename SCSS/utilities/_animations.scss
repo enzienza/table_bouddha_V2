@@ -1,0 +1,22 @@
+// main: ../style.scss
+
+.animated{
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+
+  .infinite{
+    -webkit-animation-iteration-count: infinites;
+            animation-iteration-count: infinites
+  }
+}
+
+@import 'animations/fadeIn';
+@import 'animations/fadeInDown';
+@import 'animations/fadeInRight';
+@import 'animations/fadeInLeft';
+@import 'animations/fadeInUp';
+@import 'animations/zoomIn';

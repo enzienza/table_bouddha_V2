@@ -1,0 +1,357 @@
+/*
+Name: Custom Adimin
+Author: Enza Lombardo
+Author URI: http://www.enzalombardo.be
+Description: feuille de style pour personnaliser l'Administration du site
+Version: 1.0
+Text Domain: TableBouddha
+copyright : Enza ©2023
+Tags:
+*/
+
+/* ---------------------------------------------------------
+>>>  TABLE OF CONTENTS:
+------------------------------------------------------------
+0 - ROOT
+1 - GENERAL
+ 2 - LOGIN PAGE
+3 - ALL DASHBOARD
+4 - MYOPTIONS [API - Options-Theme]
+5 - COLUMNS ADMIN [Custom-Post-Type]
+6 - STYLE FOR THE TIMETABLE PAGE
+7 - STYLE FOR THE CUSTOMTHEME PAGE
+8 - STYLE FOR THE ERRORPAGE
+9 - METABOXES
+
+----------------------------------------------------------*/
+
+/** ==============================================
+    0 - ROOT
+ */
+:root{
+    --bg-login: #232634;
+    --darken-bluegray: #32373c;
+    --lighten-bluegray: #5B6786;
+    --color-white: #fff;
+    --color-light: #f1f1f1;
+    --color-border: #7e8993;
+    --lighten-grey: #cecece;
+    --color-succes: green;
+    --color-danger: red;
+    --color-darkred: darkred;
+}
+
+
+/** ==============================================
+    1 - GENERAL
+ */
+.sub-title{
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: larger;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--lighten-bluegray);
+    letter-spacing: .5px;
+    padding-bottom: 1rem;
+}
+
+/** ==============================================
+     2 - LOGIN PAGE
+ */
+
+/* fond */
+body.login {
+    background-color: var(--bg-login);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+                  url('../img/table-bouddha-bar.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+}
+
+/* logo */
+#login h1 a, .login h1 a {
+    background: url('../img/logo-login.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-width: 257px;
+    min-height: 198px;
+    width: auto;
+    height: auto;
+    /*filter: invert(0.9);*/
+}
+
+/* formulaire */
+.login form {
+    border: none;
+}
+#pearlIt {
+    background-color: inherit;
+    box-shadow: none;
+}
+
+/* Liens */
+.login #backtoblog, .login #nav{
+    padding: 0;
+}
+#login #nav a, #login #backtoblog a {
+    color: white;
+    display: block;
+    background: gray;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 4px rgba(85, 85, 85, 0.7);
+}
+
+/** ==============================================
+    3 - ALL DASHBOARD
+ */
+/* form */
+form h2 {
+    padding-top: 1.5em;
+    border-top: 1px solid var(--lighten-grey);
+    width: 98%;
+    font-size: 1.3em;
+}
+/* Element Forms */
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select, textarea {
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid var(--lighten-grey);
+    background: var(--color-white);
+    color: var(--darken-bluegray);
+}
+
+input[type="checkbox"]{
+    border-color: var(--lighten-grey);
+    margin: auto 5px;
+}
+::placeholder{
+    color: var(--color-border);
+}
+
+
+.wp-admin{
+    background: #f1f1f1;
+}
+
+.wrap .wp-heagin-inline{
+    font-size: 2em;
+}
+
+/* Picture */
+.img-hero{
+    object-fit: cover;
+    width: 300px;
+    height: auto;
+}
+
+/** ==============================================
+    4 - MYOPTIONS [API - Options-Theme]
+ */
+/* Title */
+.myoptions h2{
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: var(--lighten-bluegray);
+}
+
+.myoptions h2::before{
+    content: "-";
+    margin-right: .5em;
+    font-size: larger;
+}
+
+.myoptions .section-description{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: lighter;
+    font-size: .9em;
+}
+
+/* OP - Generality */
+.myoptions .img-logo{
+    width:100px;
+    height:auto;
+}
+
+
+/* BTN - RESET */
+.action{
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: -.5em;
+}
+
+.action .btn-clear, .action input[type="reset"]{
+    color: var(--color-darkred);
+    letter-spacing: .2px;
+    font-weight: 600;
+}
+
+.action .btn-clear:hover, .action input[type="reset"]:hover{
+    color: var(--color-danger);
+}
+
+.action small{
+    margin-left: 1rem;
+    color: var(--lighten-bluegray);
+}
+
+
+
+/** ==============================================
+    5 - COLUMNS ADMIN [Custom-Post-Type]
+ */
+ .column-cd{
+   padding: 11px 0 0 3px;
+   width: 2.2em;
+   vertical-align: top;
+ }
+
+ .column-icon {
+   width: 50px;
+   text-align: center;
+   vertical-align: middle !important;
+ }
+ .column-icon .icon{
+   font-size: 36px;
+ }
+
+
+/** ==============================================
+ *  6 - Style for the timetable page
+ */
+.form-timetable .form-table {
+    width: 50%;
+}
+
+.form-timetable th{
+    width: 150px;
+    padding: .5em;
+    line-height: 2;
+    vertical-align: top;
+}
+
+.form-timetable td{
+    line-height: inherit;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+td .service:first-child{
+    margin-bottom: 15px;
+}
+
+.form-timetable .service-ok{
+    display: inline-table;
+    width: 160px;
+}
+
+.form-timetable .service-ok input[type="checkbox"],
+.form-timetable .service-close input[type="checkbox"]{
+    margin: .5em !important;
+}
+
+.form-timetable .service-de label,
+.form-timetable .service-a label{
+    margin: 0 .5em;
+}
+.form-timetable .service-close{
+    margin-top: .5em;
+}
+.form-timetable tr {
+    border-bottom: 1px solid #cecece;
+}
+
+.form-timetable tr:last-child {
+    border-bottom: none;
+}
+
+.form-timetable input[type="time"] {
+    width: 6em;
+    text-align: center;
+}
+
+.form-timetable input[type="checkbox"] {
+    margin: 1em !important;
+}
+
+/** ==============================================
+ *  7 - Style for the customtheme page
+ */
+
+.importers{
+  margin-top: 2.5em;
+}
+
+.importers .import-system{
+  width: 130px;
+  font-weight: bolder;
+}
+
+.importers td.desc{
+  width: 400px;
+}
+
+.height-space{
+  padding: .5em 0;
+}
+
+/** ==============================================
+ *  8 - Style for the errorpage
+ */
+.form-errorpage .submit {
+  margin-top: 4em;
+}
+
+.form-errorpage h2{
+  border: none;
+}
+
+.img-template-error{
+  display: inline-block;
+}
+
+.img-template-error .img-hero{
+  position: relative;
+  width: 350px;
+}
+
+.form-errorpage .form-table{
+  margin-right: 2em;
+  width: 65%;
+  float: right;
+}
+
+.form-errorpage .form-table th {
+    padding: 1em 0;
+    width: 150px;
+    line-height: 1;
+}
+
+.form-errorpage .form-table td {
+    padding: .5em;
+    line-height: 1;
+}
+/** ==============================================
+    9 - METABOXES
+ */
+.hndle{
+    border: none;
+}

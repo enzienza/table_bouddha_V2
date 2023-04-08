@@ -1,0 +1,33 @@
+// main: ../style.scss
+
+.table-horaire {
+  //font-family: $font-primary-thin;
+  font-size: small;
+  width: 75%;
+
+  .item-days {
+    border-bottom: 1px solid lighten($color-dark, 10%);
+    height: 50px;
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .day {
+    padding-left: 2em;
+  }
+  .hour {
+    &-list {
+      @include inline-flex;
+      @include justify-content(center);
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &-item {
+      padding: 0 0.5em;
+    }
+  }
+}
+.today {
+  color: $color-primary;
+}

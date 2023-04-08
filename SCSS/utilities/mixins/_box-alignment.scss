@@ -1,0 +1,80 @@
+// main: ../_mixins.scss
+
+
+/**
+ * BOX-SIZING
+ * @type {[type]}
+ */
+@mixin box-sizing($x) {
+  -webkit-box-sizing: ($x);
+          box-sizing: ($x);
+}
+
+
+/**
+ * DISPLAY : FLEX
+ */
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/**
+ * DISPLAY : FLEX
+ */
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+
+/**
+ * JUSTIFY-CONTENT
+ *
+ * Description :
+ * La propriété justify-content définit l'alignement le long de l'axe principal.
+ * Elle permet de distribuer l'espace excédentaire lorsque tous les items flex
+ * sur une ligne sont inflexibles ou lorsqu'ils ont atteint leur taille maximale.
+ * Elle contrôle aussi l'alignement des items lorsqu'ils débordent.
+ *
+ * @type {[flex-start | flex-end | center | space-between | space-around]}
+ */
+@mixin justify-content($x){
+  -webkit-box-pack: ($x);
+     -ms-flex-pack: ($x);
+   justify-content: ($x);
+}
+
+/*
+ * ALIGN-ITEMS
+ *
+ * Description :
+ * La propriété align-items définit la façon dont les items d'une ligne sont
+ * disposés le long de l'axe "cross". On peut le voir comme la version de j
+ * ustify-content pour "cross axis".
+ *
+ * @type {[flex-start | flex-end | center | baseline | stretch]}
+ */
+@mixin align-items($x) {
+  -webkit-box-align: ($x);
+     -ms-flex-align: ($x);
+        align-items: ($x);
+}
+
+
+
+/*
+ * ALIGN-CONTENT
+ *
+ * Description :
+ * La propriété align-content aligne les lignes d'un container flex à
+ * l'intérieur de l'espace où il reste de l'espace sur l'axe cross,
+ * un peu comme justify-content aligne les items sur l'axe principal.
+ *
+ * @type {(flex-start | flex-end | center | space-between | space-around | stretch)}
+ */
+@mixin align-content($x) {
+  -ms-flex-line-pack: ($x);
+       align-content: ($x);
+}

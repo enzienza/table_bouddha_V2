@@ -1,0 +1,152 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 03/07/2020 22:51
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-meal:before { content: "\f100"; }
+.flaticon-take-away:before { content: "\f101"; }
+.flaticon-chicken:before { content: "\f102"; }
+.flaticon-bell-covering-hot-dish:before { content: "\f103"; }
+.flaticon-hot-soup:before { content: "\f104"; }
+.flaticon-sardine:before { content: "\f105"; }
+.flaticon-preparation:before { content: "\f106"; }
+.flaticon-ice-cream:before { content: "\f107"; }
+.flaticon-muffin:before { content: "\f108"; }
+.flaticon-food-and-restaurant:before { content: "\f109"; }
+.flaticon-food-and-restaurant-1:before { content: "\f10a"; }
+.flaticon-cutlery:before { content: "\f10b"; }
+.flaticon-cake-slice:before { content: "\f10c"; }
+.flaticon-chef-hat:before { content: "\f10d"; }
+.flaticon-food-and-restaurant-2:before { content: "\f10e"; }
+.flaticon-food-and-restaurant-3:before { content: "\f10f"; }
+.flaticon-credit-card:before { content: "\f110"; }
+.flaticon-meat:before { content: "\f111"; }
+.flaticon-steak:before { content: "\f112"; }
+.flaticon-meat-1:before { content: "\f113"; }
+.flaticon-dimsum:before { content: "\f114"; }
+.flaticon-fish:before { content: "\f115"; }
+.flaticon-lobster:before { content: "\f116"; }
+.flaticon-menu:before { content: "\f117"; }
+.flaticon-plate:before { content: "\f118"; }
+.flaticon-soda:before { content: "\f119"; }
+.flaticon-cocktail:before { content: "\f11a"; }
+.flaticon-address:before { content: "\f11b"; }
+.flaticon-headphones:before { content: "\f11c"; }
+.flaticon-reservation:before { content: "\f11d"; }
+.flaticon-reserved:before { content: "\f11e"; }
+.flaticon-wine:before { content: "\f11f"; }
+.flaticon-open:before { content: "\f120"; }
+.flaticon-credit-card-1:before { content: "\f121"; }
+.flaticon-reserved-1:before { content: "\f122"; }
+.flaticon-menu-1:before { content: "\f123"; }
+.flaticon-dish:before { content: "\f124"; }
+.flaticon-facebook:before { content: "\f125"; }
+.flaticon-instagram:before { content: "\f126"; }
+.flaticon-null:before { content: "\f127"; }
+.flaticon-localization:before { content: "\f128"; }
+.flaticon-phone:before { content: "\f129"; }
+.flaticon-up-arrow:before { content: "\f12a"; }
+.flaticon-up:before { content: "\f12b"; }
+.flaticon-twitter:before { content: "\f12c"; }
+.flaticon-salad:before { content: "\f12d"; }
+.flaticon-noodles:before { content: "\f12e"; }
+.flaticon-box:before { content: "\f12f"; }
+.flaticon-beer:before { content: "\f130"; }
+.flaticon-champagne:before { content: "\f131"; }
+.flaticon-champagne-1:before { content: "\f132"; }
+.flaticon-salad-1:before { content: "\f133"; }
+.flaticon-clock:before { content: "\f134"; }
+.flaticon-calendar:before { content: "\f135"; }
+.flaticon-calendar-1:before { content: "\f136"; }
+.flaticon-time:before { content: "\f137"; }
+    
+    $font-Flaticon-meal: "\f100";
+    $font-Flaticon-take-away: "\f101";
+    $font-Flaticon-chicken: "\f102";
+    $font-Flaticon-bell-covering-hot-dish: "\f103";
+    $font-Flaticon-hot-soup: "\f104";
+    $font-Flaticon-sardine: "\f105";
+    $font-Flaticon-preparation: "\f106";
+    $font-Flaticon-ice-cream: "\f107";
+    $font-Flaticon-muffin: "\f108";
+    $font-Flaticon-food-and-restaurant: "\f109";
+    $font-Flaticon-food-and-restaurant-1: "\f10a";
+    $font-Flaticon-cutlery: "\f10b";
+    $font-Flaticon-cake-slice: "\f10c";
+    $font-Flaticon-chef-hat: "\f10d";
+    $font-Flaticon-food-and-restaurant-2: "\f10e";
+    $font-Flaticon-food-and-restaurant-3: "\f10f";
+    $font-Flaticon-credit-card: "\f110";
+    $font-Flaticon-meat: "\f111";
+    $font-Flaticon-steak: "\f112";
+    $font-Flaticon-meat-1: "\f113";
+    $font-Flaticon-dimsum: "\f114";
+    $font-Flaticon-fish: "\f115";
+    $font-Flaticon-lobster: "\f116";
+    $font-Flaticon-menu: "\f117";
+    $font-Flaticon-plate: "\f118";
+    $font-Flaticon-soda: "\f119";
+    $font-Flaticon-cocktail: "\f11a";
+    $font-Flaticon-address: "\f11b";
+    $font-Flaticon-headphones: "\f11c";
+    $font-Flaticon-reservation: "\f11d";
+    $font-Flaticon-reserved: "\f11e";
+    $font-Flaticon-wine: "\f11f";
+    $font-Flaticon-open: "\f120";
+    $font-Flaticon-credit-card-1: "\f121";
+    $font-Flaticon-reserved-1: "\f122";
+    $font-Flaticon-menu-1: "\f123";
+    $font-Flaticon-dish: "\f124";
+    $font-Flaticon-facebook: "\f125";
+    $font-Flaticon-instagram: "\f126";
+    $font-Flaticon-null: "\f127";
+    $font-Flaticon-localization: "\f128";
+    $font-Flaticon-phone: "\f129";
+    $font-Flaticon-up-arrow: "\f12a";
+    $font-Flaticon-up: "\f12b";
+    $font-Flaticon-twitter: "\f12c";
+    $font-Flaticon-salad: "\f12d";
+    $font-Flaticon-noodles: "\f12e";
+    $font-Flaticon-box: "\f12f";
+    $font-Flaticon-beer: "\f130";
+    $font-Flaticon-champagne: "\f131";
+    $font-Flaticon-champagne-1: "\f132";
+    $font-Flaticon-salad-1: "\f133";
+    $font-Flaticon-clock: "\f134";
+    $font-Flaticon-calendar: "\f135";
+    $font-Flaticon-calendar-1: "\f136";
+    $font-Flaticon-time: "\f137";

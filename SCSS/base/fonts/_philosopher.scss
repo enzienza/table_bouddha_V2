@@ -1,0 +1,23 @@
+// main: ../_fonts.scss
+
+
+// REGULAR
+@font-face {
+    font-family: 'philosopher';
+    src: url('assets/fonts/philosopher/philosopher-regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/philosopher/philosopher-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// BOLD
+@font-face {
+    font-family: 'philosopher-bold';
+    src: url('assets/fonts/philosopher/philosopher-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/philosopher/philosopher-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

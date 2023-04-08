@@ -1,0 +1,50 @@
+// main: ../style.scss
+
+
+/* ------------------------------------------------------------ */
+/* COLOR */
+/* ------------------------------------------------------------ */
+$color-primary: #F5A623;
+$color-primary-light: #FFBD4E;
+$color-primary-dark: #A16500;
+
+//$color-secondary: ;
+//$color-secondary-light: ;
+//$color-secondary-dark: ;
+
+//$color-grey:
+$color-grey-light: #919191;
+//$color-grey-dark: ;
+
+$color-dark: #111;
+$color-dark-light: #212529;
+
+$color-light: #FAFAFA;
+
+
+/* ------------------------------------------------------------ */
+/* TYPOGRAPHIE */
+/* ------------------------------------------------------------ */
+$font-primary: 'poppins';
+$font-primary-bold:'poppins-bold';
+$font-primary-light:'poppins-light';
+$font-primary-medium:'poppins-medium';
+$font-primary-thin:'poppins-thin';
+
+$font-secondary: 'philosopher';
+$font-secondary-bold: 'philosopher-bold';
+
+
+/* ------------------------------------------------------------ */
+/* BREAKPOINT - Responsive widths */
+/* ------------------------------------------------------------ */
+
+/* $mobile_width: 600px;
+$tablet_width: 768px;
+$desktop_width: 1168px;
+$wide_width: 1379px; */
+
+$XS:  320px;
+$SM:  480px;
+$MD:  768px;
+$LG:  992px;
