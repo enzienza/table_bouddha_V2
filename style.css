@@ -1066,6 +1066,15 @@ body {
   }
 }
 
+.else-display {
+  font-family: "poppins";
+  line-height: 2;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+}
+
 .tab-content {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -1079,7 +1088,8 @@ body {
 
 .tab-content > .active {
   display: block;
-  width: 80%;
+  /* width: 80%; */
+  width: 100%;
 }
 
 .tab-content .tab-pane h2 {

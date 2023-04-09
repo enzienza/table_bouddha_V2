@@ -124,6 +124,15 @@
   }
 }
 
+.else-display{
+  font-family: $font-primary;
+  line-height: 2;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+}
+
 .tab-content{
   @include shadow(0 0 10px rgba(0, 0, 0, .3));
   border-bottom-right-radius: 10px;
@@ -131,12 +140,15 @@
 
   .show{
     padding: 1em 0;
+
   }
 
   & > .active{
     display: block;
-    width: 80%;
+    /* width: 80%; */
+    width: 100%;
   }
+
   .tab-pane{
     h2{
       padding-top: 1em;
@@ -187,9 +199,6 @@
       text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
       letter-spacing: 1px;
     }
-
-
-
   }
 
   .table-two-column{
