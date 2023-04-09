@@ -1320,6 +1320,30 @@ body {
   }
 }
 
+.call-reserve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  margin: 2rem 0;
+  text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+}
+
+.btn-reservation {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #F5A623;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "philosopher";
+}
+
+.btn-reservation:hover {
+  background: #FFBD4E;
+  color: #111;
+}
+
 .table-horaire {
   font-size: small;
   width: 75%;
