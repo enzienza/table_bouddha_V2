@@ -22,3 +22,4 @@
  *      Gérer les options général du theme
  */
 require_once ('OP_General/generality.php');
+require_once ('OP_General/horaire.php');
