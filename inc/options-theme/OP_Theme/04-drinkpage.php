@@ -1,7 +1,8 @@
 <?php
 /**
- * Name Files : cartepage
- * Description : File about gestion of dispay of page 'custom-cartepage'
+ * Name File : drinkpage
+ * Description : File about gestion of dispay of page 'custom-drinkpage'
+ *
  *
  * @package WordPress
  * @subpackage TableBouddha
@@ -22,18 +23,18 @@
   9 - AJOUT STYLE & SCRIPT
 ----------------------------------------------------------*/
 
-class tablebouddha_custom_cartepage{
+class tablebouddha_custom_drinkpage{
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
      */
-    const PERMITION    = 'manage_options';
-    const SUB_GROUP   = 'custom_cartepage';
-    const NONCE        = '_custom_cartepage';
+    const PERMITION   = 'manage_options';
+    const SUB_GROUP  = 'custom_drinkpage';
+    const NONCE       = '_custom_drinkpage';
 
     // definit les section
-    const SECTION_HERO    = 'section_hero_cartepage';
-    const SECTION_INFO    = 'section_info_cartepage';
-    const SECTION_LOOP    = 'section_loop_cartepage';
+    const SECTION_HERO    = 'section_hero_drinkpage';
+    const SECTION_INFO    = 'section_info_drinkpage';
+    const SECTION_LOOP    = 'section_loop_drinkpage';
 
 
     /**
@@ -50,12 +51,12 @@ class tablebouddha_custom_cartepage{
      */
     public static function addMenu(){
         add_submenu_page(
-            tablebouddha_customtheme::GROUP,     // slug parent
-            __('Page cartes', 'TableBouddha'),                    // page_title
-            __('Page cartes', 'TableBouddha'),                     // menu_title
-            self::PERMITION,                     // capability
-            self::SUB_GROUP,                    // slug_menu
-            [self::class, 'render']              // CALLBACK
+            tablebouddha_customtheme::GROUP,    // slug parent
+            __('Page boissons', 'TableBouddha'),                   // page_title
+            __('Page boissons', 'TableBouddha'),                    // menu_title
+            self::PERMITION,                    // capability
+            self::SUB_GROUP,                   // slug_menu
+            [self::class, 'render']             // CALLBACK
         );
     }
 
@@ -65,11 +66,10 @@ class tablebouddha_custom_cartepage{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('Gestion de la page des cartes', 'TableBouddha'); ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e("Gestion de la page des boissons", 'TableBouddha')?></h1>
             <p class="description">
-                <?php _e("Sur cette page vous pouvez gérer l'affichage général de la page des cartes", 'TableBouddha'); ?>
-            </p>
-            <?php settings_errors(); ?>
+                <?php _e("Sur cette page vous pouvez gérer l'affichage général de la page des boissons", 'TableBouddha')?>
+                <?php settings_errors(); ?>
         </div>
 
         <div class="action">
@@ -118,37 +118,36 @@ class tablebouddha_custom_cartepage{
 
         // 2. Ajouter les éléments du formulaire
         add_settings_field(
-            'hero_cartepage',                             // SLUG_FIELD
+            'hero_drinkpage',                             // SLUG_FIELD
             __('Image d\'arrière plan', 'TableBouddha'),                      // LABEL
-            [self::class,'field_hero_cartepage'],         // CALLBACK
+            [self::class,'field_hero_drinkpage'],         // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_HERO
         );
         add_settings_field(
-            'element_cartepage',                          // SLUG_FIELD
+            'element_drinkpage',                          // SLUG_FIELD
             __('Ce qui doit être présent', 'TableBouddha'),                   // LABEL
-            [self::class,'field_element_cartepage'],      // CALLBACK
+            [self::class,'field_element_drinkpage'],      // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_HERO
         );
         add_settings_field(
-            'message_hero_cartepage',                     // SLUG_FIELD
+            'message_hero_drinkpage',                     // SLUG_FIELD
             __('Gestion d\'un message', 'TableBouddha'),                   // LABEL
-            [self::class,'field_message_hero_cartepage'], // CALLBACK
+            [self::class,'field_message_hero_drinkpage'], // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_HERO
         );
 
         // 3. Sauvegarder les champs
-        /* hero section */
-        register_setting(self::SUB_GROUP, 'yes_hero_cartepage');
-        register_setting(self::SUB_GROUP, 'add_hero_cartepage', [self::class, 'handle_file_hero_cartepage']);
-        /* element view on hero */
-        register_setting(self::SUB_GROUP, 'view_logo_cartepage');
-        register_setting(self::SUB_GROUP, 'view_namesite_cartepage');
-        register_setting(self::SUB_GROUP, 'yex_message_cartepage');
-        register_setting(self::SUB_GROUP, 'text_hero_cartepage');
-
+        /* hero ssection */
+        register_setting(self::SUB_GROUP, 'yes_hero_drinkpage');
+        register_setting(self::SUB_GROUP, 'add_hero_drinkpage', [self::class, 'handle_file_hero_drinkpage']);
+        /* element view on hero*/
+        register_setting(self::SUB_GROUP, 'view_logo_drinkpage');
+        register_setting(self::SUB_GROUP, 'view_namesite_drinkpage');
+        register_setting(self::SUB_GROUP, 'yex_message_drinkpage');
+        register_setting(self::SUB_GROUP, 'text_hero_drinkpage');
 
         /**
          * SECTION 2 : SECTION_INFO =======================================
@@ -167,39 +166,40 @@ class tablebouddha_custom_cartepage{
 
         // 2. Ajouter les éléments du formulaire
         add_settings_field(
-            'hidden_info_cartepage',                      // SLUG_FIELD
+            'hidden_info_drinkpage',                      // SLUG_FIELD
             __('Cacher la section', 'TableBouddha'),                          // LABEL
-            [self::class,'field_hidden_info_cartepage'],  // CALLBACK
+            [self::class,'field_hidden_info_drinkpage'],  // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_INFO
         );
         add_settings_field(
-            'title_cartepage',                            // SLUG_FIELD
+            'title_drinkpage',                            // SLUG_FIELD
             __('Ajouter un titre', 'TableBouddha'),                           // LABEL
-            [self::class,'field_title_cartepage'],        // CALLBACK
+            [self::class,'field_title_drinkpage'],        // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_INFO
         );
         add_settings_field(
-            'description_cartepage',                      // SLUG_FIELD
+            'description_drinkpage',                      // SLUG_FIELD
             __('Ajouter une description', 'TableBouddha'),                    // LABEL
-            [self::class,'field_description_cartepage'],  // CALLBACK
+            [self::class,'field_description_drinkpage'],  // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_INFO
         );
         add_settings_field(
-            'image_cartepage',                            // SLUG_FIELD
+            'image_drinkpage',                            // SLUG_FIELD
             __('Ajouter une image', 'TableBouddha'),                          // LABEL
-            [self::class,'field_image_cartepage'],        // CALLBACK
+            [self::class,'field_image_drinkpage'],        // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_INFO
         );
 
         // 3. Sauvegarder les champs
-        register_setting(self::SUB_GROUP, 'hidden_info_cartepage');
-        register_setting(self::SUB_GROUP, 'title_info_cartepage');
-        register_setting(self::SUB_GROUP, 'text_info_cartepage');
-        register_setting(self::SUB_GROUP,'image_info_cartepage',[self::class, 'handle_file_info_cartepage']);
+        register_setting(self::SUB_GROUP, 'hidden_info_drinkpage');
+        register_setting(self::SUB_GROUP, 'title_info_drinkpage');
+        register_setting(self::SUB_GROUP, 'text_info_drinkpage');
+        register_setting(self::SUB_GROUP, 'image_info_drinkpage', [self::class, 'handle_file_info_drinkpage']);
+
 
         /**
          * SECTION 3 : SECTION_LOOP =======================================
@@ -210,22 +210,23 @@ class tablebouddha_custom_cartepage{
          */
         // 1. Créer la section
         add_settings_section(
-            self::SECTION_LOOP,                      // SLUG_SECTION
-            __('Message', 'TableBouddha'),                          // TITLE
-            [self::class, 'display_section_content'],   // CALLBACK
+            self::SECTION_LOOP,                           // SLUG_SECTION
+            __('Message', 'TableBouddha'),                               // TITLE
+            [self::class, 'display_section_content'], // CALLBACK
             self::SUB_GROUP
         );
 
         // 2. Ajouter les éléments du formulaire
         add_settings_field(
-            'msg_loop_cartepage',                      // SLUG_FIELD
+            'msg_loop_drinkpage',                            // SLUG_FIELD
             __('Gestion du message', 'TableBouddha'),                          // LABEL
-            [self::class,'field_msg_loop_cartepage'],  // CALLBACK
+            [self::class,'field_loop_drinkpage'],        // CALLBACK
             self::SUB_GROUP ,                            // SLUG_PAGE
             self::SECTION_LOOP
         );
+
         // 3. Sauvegarder les champs
-        register_setting(self::SUB_GROUP, 'msg_loop_cartepage');
+        register_setting(self::SUB_GROUP, 'msg_loop_drinkpage');
     }
 
 
@@ -259,141 +260,140 @@ class tablebouddha_custom_cartepage{
         <?php
     }
 
+
     /**
      * 7 - DEFINIR LE TELECHARGEMENT DES FICHIER
      */
     // SECTION 1 : SECTION_HERO =======================================
-    public static function handle_file_hero_cartepage($options){
-        if(!empty($_FILES['add_hero_cartepage']['tmp_name'])){
-            $urls = wp_handle_upload($_FILES['add_hero_cartepage'], array('test_form' => FALSE));
+    public static function handle_file_hero_drinkpage($options){
+        if(!empty($_FILES['add_hero_drinkpage']['tmp_name'])){
+            $urls = wp_handle_upload($_FILES['add_hero_drinkpage'], array('test_form' => FALSE));
             $temp = $urls['url'];
             return $temp;
-        } // end -> if(!empty($_FILES['add_hero_cartepage']['tmp_name']))
+        } // end -> if(!empty($_FILES['add_hero_drinkpage']['tmp_name']))
 
         //no upload. old file url is the new value.
-        return get_option('add_hero_cartepage');
+        return get_option('add_hero_drinkpage');
     }
 
     // SECTION 2 : SECTION_INFO =======================================
-    public static function handle_file_info_cartepage($options){
-        if(!empty($_FILES['image_info_cartepage']['tmp_name'])){
-            $urls = wp_handle_upload($_FILES['image_info_cartepage'], array('test_form' => FALSE));
+    public static function handle_file_info_drinkpage($options){
+        if(!empty($_FILES['image_info_drinkpage']['tmp_name'])){
+            $urls = wp_handle_upload($_FILES['image_info_drinkpage'], array('test_form' => FALSE));
             $temp = $urls['url'];
             return $temp;
-        } // end -> if(!empty($_FILES['image_info_cartepage']['tmp_name']))
+        } // end -> if(!empty($_FILES['image_info_drinkpage']['tmp_name']))
 
         //no upload. old file url is the new value.
-        return get_option('image_info_cartepage');
+        return get_option('image_info_drinkpage');
     }
-
 
     /**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
     // SECTION 1 : SECTION_HERO =======================================
-    public static function field_hero_cartepage(){
-        $yes_hero_cartepage = esc_attr(get_option('yes_hero_cartepage'));
+    public static function field_hero_drinkpage(){
+        $yes_hero_drinkpage = esc_attr(get_option('yes_hero_drinkpage'));
         ?>
         <div>
             <p class="description"><?php _e("Remarque : Si vous n'ajoutez pas image, il prendra le font d'écran par défaut", 'TableBouddha'); ?></p>
-            <input type="hidden" name="yes_hero_cartepage" value="0" />
-            <input type="checkbox" id="yes_hero_cartepage" name="yes_hero_cartepage" value="1" <?php checked(1, $yes_hero_cartepage, true) ?> />
+            <input type="hidden" name="yes_hero_drinkpage" value="0"/>
+            <input type="checkbox"  id="yes_hero_drinkpage"  name="yes_hero_drinkpage"  value="1" <?php checked(1, $yes_hero_drinkpage, true) ?> />
             <label for="" class="info"><?php _e("Ajouter l'image comme d'arrière plan", 'TableBouddha')?></label>
         </div>
         <div class="height-space">
-            <input type="file" id="add_hero_cartepage" name="add_hero_cartepage" value="<?php echo get_option('add_hero_cartepage'); ?>"/>
+            <input type="file" id="add_hero_drinkpage" name="add_hero_drinkpage" value="<?php echo get_option('add_hero_drinkpage'); ?>" />
         </div>
         <div>
-            <img src="<?php echo get_option('add_hero_cartepage'); ?>" class="img-hero" alt=""/>
+            <img src="<?php echo get_option('add_hero_drinkpage'); ?>" class="img-hero" alt="" />
         </div>
         <?php
     }
-    public static function field_element_cartepage(){
-        $view_logo_cartepage     = esc_attr(get_option('view_logo_cartepage'));
-        $view_namesite_cartepage = esc_attr(get_option('view_namesite_cartepage'));
+    public static function field_element_drinkpage(){
+        $view_logo_drinkpage     = esc_attr(get_option('view_logo_drinkpage'));
+        $view_namesite_drinkpage = esc_attr(get_option('view_namesite_drinkpage'));
         ?>
         <p class="description"><?php _e("Cocher ce qui doit être présent sur l'image (par-dessus)", 'TableBouddha')?></p>
         <p>
-            <input type="hidden" name="view_logo_cartepage" value="0" />
-            <input type="checkbox" id="view_logo_cartepage" name="view_logo_cartepage" value="1" <?php checked(1, $view_logo_cartepage, true) ?>  />
+            <input type="hidden" name="view_logo_drinkpage" value="0 "/>
+            <input type="checkbox" id="view_logo_drinkpage" name="view_logo_drinkpage" value="1" <?php checked(1, $view_logo_drinkpage, true) ?> />
             <label for=""><?php _e("Ajouter le logo", 'TableBouddha') ?></label>
         </p>
         <p>
-            <input type="hidden" name="view_namesite_cartepage" value="0" />
-            <input type="checkbox" id="view_namesite_cartepage" name="view_namesite_cartepage" value="1" <?php checked(1, $view_namesite_cartepage, true) ?>/>
+            <input type="hidden" name="view_namesite_drinkpage" value="0 "/>
+            <input type="checkbox" id="view_namesite_drinkpage" name="view_namesite_drinkpage" value="1" <?php checked(1, $view_namesite_drinkpage, true) ?> />
             <label for=""><?php _e('Ajouter le nom du site', 'TableBouddha')?></label>
         </p>
         <?php
     }
-    public static function field_message_hero_cartepage(){
-        $yex_message_cartepage = esc_attr(get_option('yex_message_cartepage'));
-        $text_hero_cartepage = esc_attr(get_option('text_hero_cartepage'));
+    public static function field_message_hero_drinkpage(){
+        $yex_message_drinkpage = esc_attr(get_option('yex_message_drinkpage'));
+        $text_hero_drinkpage = esc_attr(get_option('text_hero_drinkpage'));
         ?>
         <p class="description"><?php _e("Ajouter un message par-dessus l'image d'arrière plan ", 'TableBouddha')?></p>
         <div class="height-space">
-            <input type="hidden" name="yex_message_cartepage" value="0" />
-            <input type="checkbox" id="yex_message_cartepage" name="yex_message_cartepage" value="1" <?php checked(1, $yex_message_cartepage, true) ?> />
+            <input type="hidden" name="yex_message_drinkpage" value="0" />
+            <input type="checkbox" id="yex_message_drinkpage" name="yex_message_drinkpage" value="1" <?php checked(1, $yex_message_drinkpage, true) ?> />
             <label for=""><?php _e('Afficher le texte souhaiter', 'TableBouddha')?></label>
-            <textarea name="text_hero_cartepage" id="text_hero_cartepage" class="large-text code"><?php echo $text_hero_cartepage ?></textarea>
+            <textarea name="text_hero_drinkpage" id="text_hero_drinkpage" class="large-text code"><?php echo $text_hero_drinkpage ?></textarea>
         </div>
         <?php
     }
 
     // SECTION 2 : SECTION_INFO =======================================
-    public static function field_hidden_info_cartepage(){
-        $hidden_info_cartepage = esc_attr(get_option('hidden_info_cartepage'));
+    public static function field_hidden_info_drinkpage(){
+        $hidden_info_drinkpage = esc_attr(get_option('hidden_info_drinkpage'));
         ?>
-        <input type="hidden" name="hidden_info_cartepage" value="0" />
-        <input type="checkbox" id="hidden_info_cartepage" name="hidden_info_cartepage" value="1" <?php checked(1, $hidden_info_cartepage, true); ?> />
+        <input type="hidden" name="hidden_info_drinkpage" value="0" />
+        <input type="checkbox" id="hidden_info_drinkpage" name="hidden_info_drinkpage" value="1" <?php checked(1, $hidden_info_drinkpage, true); ?> />
         <label for=""><?php _e("Masquer cette section de la page dédier aux cartes", 'TableBouddha') ?></label>
         <p class="description"><?php _e("Remarque : Seule le titre sera affiché dans la section", 'TableBouddha'); ?></p>
         <?php
     }
-    public static function field_title_cartepage(){
-        $title_info_cartepage = esc_attr(get_option('title_info_cartepage'));
+    public static function field_title_drinkpage(){
+        $title_info_drinkpage = esc_attr(get_option('title_info_drinkpage'));
         ?>
         <input type="text"
-               id="title_info_cartepage"
-               name="title_info_cartepage"
-               value="<?php echo $title_info_cartepage ?>"
+               id="title_info_drinkpage"
+               name="title_info_drinkpage"
+               value="<?php echo $title_info_drinkpage ?>"
                class="large-text"
         />
         <p class="description"><?php _e("Remarque : Ceci est le titre de la section et sera affiché même si la section est masquée", 'TableBouddha'); ?></p>
         <?php
     }
-    public static function field_description_cartepage(){
-        $text_info_cartepage = esc_attr(get_option('text_info_cartepage'));
+    public static function field_description_drinkpage(){
+        $text_info_drinkpage = esc_attr(get_option('text_info_drinkpage'));
         ?>
-        <textarea name="text_info_cartepage" id="text_info_cartepage" class="large-text code"><?php echo $text_info_cartepage ?></textarea>
+        <textarea name="text_info_drinkpage" id="text_info_drinkpage" class="large-text code"><?php echo $text_info_drinkpage ?></textarea>
         <?php
     }
-    public static function field_image_cartepage(){
+    public static function field_image_drinkpage(){
         ?>
         <p>
-            <input type="file" id="image_info_cartepage" name="image_info_cartepage" value="<?php echo get_option('image_info_cartepage') ?>" />
+            <input type="file" id="image_info_drinkpage" name="image_info_drinkpage" value="<?php echo get_option('image_info_drinkpage') ?>" />
         </p>
         <p>
-            <img src="<?php echo get_option('image_info_cartepage'); ?>" class="img-hero" alt=""/>
+            <img src="<?php echo get_option('image_info_drinkpage'); ?>" class="img-hero" alt="" />
         </p>
         <?php
     }
 
 
     // SECTION 3 : SECTION_LOOP =======================================
-    public static function field_msg_loop_cartepage(){
-        $msg_loop_cartepage = esc_attr(get_option('msg_loop_cartepage'));
+    public static function field_loop_drinkpage(){
+        $msg_loop_drinkpage = esc_attr(get_option('msg_loop_drinkpage'));
         ?>
         <p class="description"><?php _e("Ajouter un message pour inciter la clientèle cliquer sur le menu", 'TableBouddha') ?></p>
-        <input type="text" name="msg_loop_cartepage" id="msg_loop_cartepage" class="large-text" value="<?php echo $msg_loop_cartepage ?>"/>
+        <input type="text" class="large-text" name="msg_loop_drinkpage" id="msg_loop_drinkpage" value="<?php echo $msg_loop_drinkpage ?>" />
         <?php
     }
 
     /**
      * 9 - AJOUT STYLE ET SCRIPT
      */
-
 }
 
-if(class_exists('tablebouddha_custom_cartepage')){
-    tablebouddha_custom_cartepage::register();
+if(class_exists('tablebouddha_custom_drinkpage')){
+    tablebouddha_custom_drinkpage::register();
 }

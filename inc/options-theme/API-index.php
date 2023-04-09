@@ -30,3 +30,5 @@ require_once ('OP_General/horaire.php');
  */
 require_once ('OP_Theme/01-customTheme.php');
 require_once ('OP_Theme/02-homepage.php');
+require_once ('OP_Theme/03-cartepage.php');
+require_once ('OP_Theme/04-drinkpage.php');
