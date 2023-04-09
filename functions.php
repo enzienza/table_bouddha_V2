@@ -30,7 +30,7 @@ require_once ('inc/customize/customize-index.php');
  * 2 - Options-Theme
  *     Directory about option of theme
  */
-// require_once ('inc/options-theme/API-index.php');
+ require_once ('inc/options-theme/API-index.php');
 
 /** =====================================================
  * 3 - Post-Type
