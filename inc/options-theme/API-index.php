@@ -33,3 +33,4 @@ require_once ('OP_Theme/02-homepage.php');
 require_once ('OP_Theme/03-cartepage.php');
 require_once ('OP_Theme/04-drinkpage.php');
 require_once ('OP_Theme/05-takeawaypage.php');
+require_once ('OP_Theme/06-eventpage.php');
