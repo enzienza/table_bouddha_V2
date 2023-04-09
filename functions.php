@@ -42,7 +42,7 @@ require_once ('inc/post-type/cartes.php');
  * 4 - Metaboxes
  *     Directory about metaboxes created for theme
  */
-// require_once('inc/metaboxes/meta-index.php');
+ require_once('inc/metaboxes/meta-index.php');
 
 /** =====================================================
  * 5 - Taxonomys
