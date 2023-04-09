@@ -36,7 +36,7 @@ require_once ('inc/customize/customize-index.php');
  * 3 - Post-Type
  *     Directory about Custom Post Types created for theme
  */
-
+require_once ('inc/post-type/cartes.php');
 
 /** =====================================================
  * 4 - Metaboxes
