@@ -1088,8 +1088,13 @@ body {
 
 .tab-content > .active {
   display: block;
-  /* width: 80%; */
   width: 100%;
+}
+
+.tab-content > .active .wp-block-table {
+  width: 80%;
+  display: flex;
+  margin: auto;
 }
 
 .tab-content .tab-pane h2 {
