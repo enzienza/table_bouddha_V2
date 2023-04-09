@@ -29,3 +29,4 @@ require_once ('OP_General/horaire.php');
  *      Gérer les options du theme personnalisé
  */
 require_once ('OP_Theme/01-customTheme.php');
+require_once ('OP_Theme/02-homepage.php');
