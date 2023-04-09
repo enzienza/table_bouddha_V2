@@ -38,6 +38,7 @@ require_once ('inc/customize/customize-index.php');
  */
 require_once ('inc/post-type/cartes.php');
 require_once ('inc/post-type/boissons.php');
+require_once ('inc/post-type/emporters.php');
 
 /** =====================================================
  * 4 - Metaboxes
