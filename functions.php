@@ -37,6 +37,7 @@ require_once ('inc/customize/customize-index.php');
  *     Directory about Custom Post Types created for theme
  */
 require_once ('inc/post-type/cartes.php');
+require_once ('inc/post-type/boissons.php');
 
 /** =====================================================
  * 4 - Metaboxes
