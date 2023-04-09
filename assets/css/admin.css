@@ -64,7 +64,7 @@ Tags:
 body.login {
     background-color: var(--bg-login);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-                  url('../img/table-bouddha-bar.jpg') no-repeat fixed;
+    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
@@ -219,20 +219,20 @@ input[type="checkbox"]{
 /** ==============================================
     5 - COLUMNS ADMIN [Custom-Post-Type]
  */
- .column-cd{
-   padding: 11px 0 0 3px;
-   width: 2.2em;
-   vertical-align: top;
- }
+.column-cd{
+    padding: 11px 0 0 3px;
+    width: 2.2em;
+    vertical-align: top;
+}
 
- .column-icon {
-   width: 50px;
-   text-align: center;
-   vertical-align: middle !important;
- }
- .column-icon .icon{
-   font-size: 36px;
- }
+.column-icon {
+    width: 50px;
+    text-align: center;
+    vertical-align: middle !important;
+}
+.column-icon .icon{
+    font-size: 36px;
+}
 
 
 /** ==============================================
@@ -297,46 +297,46 @@ td .service:first-child{
  */
 
 .importers{
-  margin-top: 2.5em;
+    margin-top: 2.5em;
 }
 
 .importers .import-system{
-  width: 130px;
-  font-weight: bolder;
+    width: 130px;
+    font-weight: bolder;
 }
 
 .importers td.desc{
-  width: 400px;
+    width: 400px;
 }
 
 .height-space{
-  padding: .5em 0;
+    padding: .5em 0;
 }
 
 /** ==============================================
  *  8 - Style for the errorpage
  */
 .form-errorpage .submit {
-  margin-top: 4em;
+    margin-top: 4em;
 }
 
 .form-errorpage h2{
-  border: none;
+    border: none;
 }
 
 .img-template-error{
-  display: inline-block;
+    display: inline-block;
 }
 
 .img-template-error .img-hero{
-  position: relative;
-  width: 350px;
+    position: relative;
+    width: 350px;
 }
 
 .form-errorpage .form-table{
-  margin-right: 2em;
-  width: 65%;
-  float: right;
+    margin-right: 2em;
+    width: 65%;
+    float: right;
 }
 
 .form-errorpage .form-table th {
